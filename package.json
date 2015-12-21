@@ -1,0 +1,25 @@
+{
+  "name": "http-request",
+  "version": "1.0.0",
+  "description": "simple node http wrapper",
+  "main": "HttpRequest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoavfeld/http-request.git"
+  },
+  "author": "Yoav Feldman <yoavfeld@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoavfeld/http-request/issues"
+  },
+  "homepage": "https://github.com/yoavfeld/http-request",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "http": "0.0.0",
+    "lodash": "^3.10.1",
+    "log4js": "^0.6.29"
+  }
+}
