@@ -1,6 +1,6 @@
 {
-  "name": "http-request",
-  "version": "1.0.0",
+  "name": "http-simple",
+  "version": "1.0.1",
   "description": "simple node http wrapper",
   "main": "HttpRequest.js",
   "scripts": {
