@@ -24,6 +24,7 @@ p.sendRequest = function(options, requestData, cb, timeoutCallback) {
     
     req.end(requestData);
 };
+
 p._onRequestTimeout = function(req, cb, timeoutCallback) {
     this._debug('_onRequestTimeout');
     
@@ -35,7 +36,8 @@ p._onRequestTimeout = function(req, cb, timeoutCallback) {
     } else {
         req.abort(); // raising _onRequestError
     }
-}
+};
+
 p._onRequestError = function(cb, requestData, err) {
     this._debug('_onRequestError');
 
@@ -70,6 +72,8 @@ p._onReadable = function(res, body) {
 
 p._onSendRequestDone = function(cb, res, body) {
     this._debug('_onSendRequestDone', body);
+	res.body = body;
     cb(null, res, body);
 };
+
 module.exports = HttpRequest;
