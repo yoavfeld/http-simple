@@ -48,7 +48,7 @@ p._onRequestError = function(cb, requestData, err) {
 p._onResponse = function(cb, requestData, res) {
     this._debug('_onResponse');
     
-    if (res.statusCode !== 200) {
+    if (res.statusCode < 200 || res.statusCode >= 400 ) {
         var errorMessage = 'Got bad status code from server: ' + res.statusCode;
         this._logger.warn(errorMessage);
         cb(new Error(errorMessage));
